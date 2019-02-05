@@ -190,6 +190,22 @@ login({
                   MaidSearch=false;
                   api.sendMessage("Maid-chan: Bé Maid bị tạm dừng hoạt động "+config.EmoSad, message.threadID);
                 }
+                else if(str=="HPNY all"){
+                  console.log("HPNY all");
+                  api.getFriendsList((err, data) => {
+                      if(err) return console.error(err);
+                      console.log(data.length);
+                      list_except = config.HPNY_except;
+                      msg = config.MaidHPNY;
+                      for (var i = 0; i < data.length; i++) {
+                        let id = data[i].userID;
+                        if(!list_except.includes(id)){
+                          api.sendMessage(msg , id);
+                          console.log(data[i].userID + "-----"+ data[i].profileUrl + "-----" + data[i].fullName );
+                        }
+                      }
+                  });
+                }
                 else if(str=="help master"){
                   console.log("help master");
                   let HelpCommand1=" (Only Master) maid turn on/turn off/help master, turn on/off group chat/search, set kwwebsearch/kwimagesearch/addbadkw/deletebadkw/numofimagesearch stirng";

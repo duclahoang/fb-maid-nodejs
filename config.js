@@ -5,6 +5,8 @@ let MaidSelf = "Maid-chan: ";
 let MaidTurnOff = "Maid-chan: Bye bye !! Gọi em lên nếu cần nhé \uD83D\uDE22 ";
 let MaidWrongSyntax ="Maid-chan: Sai cú pháp rồi !!";
 let MaidTurnOn = "Maid-chan: Hello, bé Maid trở lại rồi đây \uD83D\uDE06 ";
+let MaidHPNY = "\uD83D\uDE06\uD83D\uDE06 Chúc mừng năm mới – Phát tài phát lộc – Tiền vô xồng xộc – Tiền ra từ từ - Sức khỏe có dư – Công danh tấn tới – Tình duyên phơi phới \uD83D\uDE06\uD83D\uDE06";
+let HPNY_except =['626758411','805900182','1049290186','100009086126439','100007957234432','100007269701518','100005617537872','100005226618947','100004675626950','100004390244573','100004285232699','100004053541537','100002940411610','100002502285637','100001307265247','100000258458252','100004387150724','100000205513011','100022366175779','100006888720653','100005308325124','100013161729908','100004987801061','100007960832650','100003824788959','100012770463568','100005108198486','100003703435624','100013451708464','100006513344940','100005518213935','100005342804800','100009916969217','100009479941118','100000522074109','100003801544905','100000802120021','100004069959791','100000446218161','100002870902897','100009316289789','100006194163976','100004606353258','100000206080681','100006136960200','100004092186380','100007158638597','100004369022271','0'];
 let MaidGreeting = "Maid-chan: Hiện tại anh Đức đang bận! Bạn có thể chat với bé Maid hoặc để lại lời nhắn";
 let MaidNotUnderstand ="Maid-chan: Bé chỉ hiểu tin nhắn chữ";
 let MaidNoResult = "Maid-chan: Em không kiếm ra kết quả";
@@ -78,6 +80,8 @@ let deleteBadKW = function(str){
 };
 
 let ConfigExport = {
+  HPNY_except:HPNY_except,
+  MaidHPNY:MaidHPNY,
   MaidTurnOff:MaidTurnOff,
   MaidTurnOn:MaidTurnOn,
   MaidWrongSyntax:MaidWrongSyntax,
